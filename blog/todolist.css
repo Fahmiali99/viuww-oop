@@ -1,0 +1,508 @@
+/* Lingkaran */
+.action-circle {
+    background: transparent;
+    border: 1px solid #CCC;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+/* icon cek dan sampah */
+.action-circle .material-icons {
+    color: #CCC;
+    font-size: 18px;
+    vertical-align: -3px;
+}
+
+.action-circle.completed {
+    background: #35BA67;
+    border: 1px solid #2fa65c;
+}
+
+.action-circle.completed .material-icons {
+    color: #FFF;
+}
+
+.action-circle.large {
+    height: 30px;
+    width: 30px;
+}
+
+.action-circle.large .material-icons {
+    font-size: 22px;
+    vertical-align: -10px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-top: 0;
+    border-bottom: 0;
+    border: 0;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.clearfix:after::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+@media all and (min-width: 1024px) {
+    body header img.brand-logo {
+        height: 90px;
+    }
+}
+
+.todo-list-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.todo-list-wrapper .todo-list-container {
+    border: 1px solid #CCC;
+    padding: 20px;
+    margin: 20px;
+    background-color: #4a8cac;
+    /* box-shadow: 0px 5px 5px #CCC; */
+    border-radius: 20px;
+}
+
+.todo-list-wrapper .mark-all-tasks {
+    text-align: right;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #CCC;
+}
+
+.todo-list-wrapper .mark-all-tasks .mark-all-tasks-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.todo-list-wrapper .mark-all-tasks .mark-all-btn {
+    cursor: pointer;
+    display: inline-block;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.todo-list-wrapper .mark-all-tasks .mark-all-btn#mark-all-finished {
+    color: #0AFF66;
+}
+
+.todo-list-wrapper .mark-all-tasks .mark-all-btn#mark-all-incomplete {
+    color: #666;
+}
+
+.todo-list-wrapper .mark-all-tasks .mark-all-btn#mark-all-incomplete .action-circle {
+    border: 1px solid #666;
+}
+
+.todo-list-wrapper .mark-all-tasks .mark-all-btn#mark-all-incomplete .action-circle .material-icons {
+    color: #666;
+}
+
+.todo-list-wrapper .mark-all-tasks .mark-all-btn.move-up {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+    position: absolute;
+    right: 0;
+}
+
+.todo-list-wrapper .mark-all-tasks .mark-all-btn.move-down {
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
+    position: absolute;
+    right: 0;
+}
+
+.todo-list-wrapper .mark-all-tasks .btn-label {
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.todo-list-wrapper .todo-list-header h3,
+.todo-list-wrapper .todo-list-footer h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #666;
+}
+
+.todo-list-wrapper .todo-list-body {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.todo-list-wrapper #todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #CCC;
+    border: none;
+}
+
+.todo-list-wrapper #todo-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.todo-list-wrapper #todo-list li .task-container {
+    display: table;
+    background: #FFF;
+    padding: 8px 20px;
+    width: 100%;
+    border: 1px solid #CCC;
+    border-bottom: none;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-transition: background 200ms ease;
+    -moz-transition: background 200ms ease;
+    -ms-transition: background 200ms ease;
+    -o-transition: background 200ms ease;
+    transition: background 200ms ease;
+    border-radius: 15px;
+
+}
+
+.todo-list-wrapper #todo-list li .task-container .task-label {
+    display: table-cell;
+    font-size: 20px;
+    font-weight: 400;
+    vertical-align: middle;
+    color: #333;
+    word-break: break-all;
+}
+
+.todo-list-wrapper #todo-list li .task-container .task-action-btn {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.todo-list-wrapper #todo-list li .task-container .task-action-btn .action-circle {
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.todo-list-wrapper #todo-list li .task-container .task-action-btn .action-circle:hover {
+    border: 1px solid #8c8c8c;
+    background: #FFF;
+}
+
+.todo-list-wrapper #todo-list li .task-container .task-action-btn .action-circle:hover .material-icons {
+    color: #8c8c8c;
+}
+
+.todo-list-wrapper #todo-list li .task-container:hover {
+    background: #EBEEEF;
+}
+
+.todo-list-wrapper #todo-list li.completed .task-container {
+    background: #F9F9F9;
+}
+
+.todo-list-wrapper #todo-list li.completed .task-container .complete-btn {
+    background: #35BA67;
+    border: 1px solid #2fa65c;
+}
+
+.todo-list-wrapper #todo-list li.completed .task-container .complete-btn .material-icons {
+    color: #FFF;
+}
+
+.todo-list-wrapper #todo-list li.completed .task-container .complete-btn:hover {
+    background: #35BA67;
+    border: 1px solid #2fa65c;
+}
+
+.todo-list-wrapper #todo-list li.completed .task-container .complete-btn:hover .material-icons {
+    color: #FFF;
+}
+
+.todo-list-wrapper #todo-list li.completed .task-container .task-label {
+    color: #CCC;
+}
+
+.todo-list-wrapper #todo-list li.new .task-container {
+    -webkit-animation: taskHighlighter 2000ms linear 1;
+    animation: taskHighlighter 2000ms linear 1;
+}
+
+.todo-list-wrapper .todo-list-footer {
+    position: relative;
+}
+
+.todo-list-wrapper .todo-list-footer .add-task-btn-wrapper {
+    text-align: center;
+}
+
+.todo-list-wrapper .todo-list-footer .add-task-btn {
+    cursor: pointer;
+    border: 2px solid #e9e9e9;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.todo-list-wrapper .todo-list-footer .add-task-btn.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.todo-list-wrapper .todo-list-footer .add-task-btn:hover {
+    background-color: rgba(131, 198, 214, 0.7)
+}
+
+.todo-list-wrapper .todo-list-footer .add-task-btn:hover .material-icons {
+    color: #EBEEEF;
+}
+
+.todo-list-wrapper .todo-list-footer .add-task-btn .material-icons {
+    color: #ffffff;
+    font-size: 34px;
+}
+
+.todo-list-wrapper .todo-list-footer .new-task-wrapper {
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.todo-list-wrapper .todo-list-footer .new-task-wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.todo-list-wrapper .todo-list-footer .new-task-wrapper textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #CCC;
+    height: 90px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.todo-list-wrapper .todo-list-footer .new-task-wrapper textarea:focus {
+    border: 1px solid #bfbfbf;
+    outline: none;
+}
+
+.todo-list-wrapper .todo-list-footer .new-task-wrapper textarea.error {
+    border: 1px solid #ffffff;
+    outline: none;
+}
+
+.todo-list-wrapper .todo-list-footer .new-task-wrapper .error-message {
+    color: #000000;
+    font-style: italic;
+}
+
+.todo-list-wrapper .todo-list-footer .new-task-wrapper .btn {
+    padding: 10px 15px;
+    float: right;
+    cursor: pointer;
+}
+
+.todo-list-wrapper .todo-list-footer .new-task-wrapper .add-new-task-btn {
+    background: rgb(255, 255, 255, 0.3);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 7px;
+}
+
+.todo-list-wrapper .todo-list-footer .new-task-wrapper.visible {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.notification-popup {
+    position: fixed;
+    top: 63.3%;
+    right: 382px;
+    width: 58.5%;
+    display: inline-block;
+    background: #1F8FEF;
+    border: 1px solid #1082e4;
+    color: #FFF;
+    padding: 20px;
+    opacity: .8;
+    border-radius: 2px;
+    box-sizing: border-box;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    padding: 20px 0;
+
+    z-index: -1;
+}
+
+.notification-popup.success {
+    background: #35BA67;
+    border: 1px solid #2fa65c;
+}
+
+.notification-popup p {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.notification-popup .task {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.notification-popup .notification-text {
+    font-size: 14px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.notification-popup.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+@media all and (min-width: 980px) {
+    .todo-list-wrapper .todo-list-footer::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .todo-list-wrapper .todo-list-footer h3 {
+        display: inline-block;
+    }
+
+    .todo-list-wrapper .todo-list-footer .add-task-btn-wrapper {
+        float: right;
+        margin-top: 22px;
+    }
+}
+
+
+
+@media all and (min-width: 540px) {
+    .todo-list-wrapper .todo-list-footer::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .todo-list-wrapper .todo-list-footer h3 {
+        display: inline-block;
+    }
+
+    .todo-list-wrapper .todo-list-footer .add-task-btn-wrapper {
+        float: right;
+        margin-top: 22px;
+    }
+}
+
+/*=====  End of Media Queries  ======*/
+/*========================================
+  =            CSS 3 Animations            =
+  ========================================*/
+@-webkit-keyframes taskHighlighter {
+    0% {
+        background: #FEEB99;
+    }
+
+    100% {
+        background: #FFF;
+    }
+}
+
+@keyframes taskHighlighter {
+    0% {
+        background: #FEEB99;
+    }
+
+    100% {
+        background: #FFF;
+    }
+}
+
+/*=====  End of CSS 3 Animations  ======*/

@@ -1,0 +1,777 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    /*tidak bisa scroll kanan*/
+    transition: 0.2s linear;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    background: rgb(101, 155, 255);
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: black;
+    height: 70px;
+    align-items: center;
+    z-index: 6;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 17%;
+    justify-content: space-between;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.65em;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-style: normal;
+}
+
+a.active,
+a:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* -------------------------------------------------------------- */
+/* Menu toggle */
+.menu-toggle {
+    display: none;
+    /*display normal*/
+    align-items: center;
+    flex-direction: column;
+    height: 15px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 6;
+
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 42px;
+    top: -3px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+
+}
+
+/* Judul Skill */
+.titlePs h4 {
+    font-family: cursive;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleAi h4 {
+    font-family: cursive;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kirititleFigma h4 {
+    font-family: cursive;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kirititlePr h4 {
+    font-family: cursive;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kirititleVegas h4 {
+    font-family: cursive;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kirititleFilmora h4 {
+    font-family: cursive;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kirititleCubase h4 {
+    font-family: cursive;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------- */
+/* Responsive Breakout */
+
+/* Ukuran FUll Profile Background */
+
+/* Ukuran tablet*/
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 150px;
+    }
+}
+
+/* Ukuran mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        /*memulai toggle*/
+        right: 0;
+        top: 0;
+        width: 60%;
+        /*lebar slidebar*/
+        height: 100vh;
+        /* Viewport Heigh / Tinggi layar yang kita lihat*/
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgb(101, 155, 255);
+        z-index: -1;
+        /*umpetin slide bar dari navbar*/
+        transform: translateX(100%);
+        /*awal slideBar ngumpet ke kanan dulu*/
+        /*--> LANJUT tambahakn di Body*/
+        transition: all 1s;
+        opacity: 0;
+        /* position: fixed; */
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+        /*jika UL terkenal kelas slide/navigasi BALIKIN lagi ke posisi  awal (0)*/
+        z-index: 5;
+    }
+}
+
+/* .conMode {
+    width: 40px;
+} */
+
+.checkbox {
+    opacity: 0%;
+    position: absolute;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+/* .checkbox {
+    opacity: 0%;
+} */
+
+body.dark {
+    background-color: #292C35;
+}
+
+.label {
+    background: #111;
+    display: flex;
+    border-radius: 50px;
+    height: 26px;
+    width: 50px;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    margin-left: 10px;
+    padding: 5px;
+    border: 2px solid #fff;
+}
+
+.ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 31px;
+    width: 31px;
+    transition: 0.4s;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+/* -------- BANNER --------- */
+/* .containerBanner {
+
+} */
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background-image: url(sampul.png);
+    background-size: cover;
+    text-align: center;
+    z-index: -1;
+}
+
+.fotoProfile {
+    width: 100%;
+    height: 55vh;
+    text-align: center;
+    background-size: cover;
+}
+
+.fotoProfile img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-top: 180px;
+
+}
+
+.fotoProfile h5 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+
+
+
+/* --------------- MAIN / ISI --------------- */
+
+/* section {
+    width: 100%;
+    height: 100%;
+    border-style: dashed rgb(236, 37, 37);
+} */
+
+/* ########### ISI KIRI ########### */
+.kiri {
+    width: 10%;
+    height: 250vh;
+    float: left;
+    position: absolute;
+    /* border-style: dashed; */
+}
+
+
+
+/* ########### ISI TENGAH ########### */
+.tengah {
+    width: 80%;
+    height: 200vh;
+
+    float: right;
+    position: absolute;
+    left: 10%;
+    /* border-style: dashed; */
+
+}
+
+.judulSkill h4 {
+    width: 100%;
+    font-size: 45px;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+
+    font-family: 'Bree Serif', serif;
+    color: darkgray;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* JUDUL SKILL */
+
+/* SKILL */
+.containerSkill {
+    margin-top: 100px;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(178, 205, 255);
+    /* border-style: dashed; */
+}
+
+/* PS */
+.conps {
+    width: 100%;
+    height: 10%;
+    /* border-style: dashed; */
+    margin: -22px 0;
+    padding: 24px 0;
+}
+
+div.titlePs {
+    width: 50%;
+    height: 100%;
+    float: left;
+    left: 50%;
+    background-color: rgb(235, 235, 235);
+}
+
+div.logoPs {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 235);
+}
+
+.ps {
+    background-image: url(PS.png);
+    width: 79px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    margin-inline: auto;
+}
+
+/* AI */
+.conai {
+    width: 100%;
+    height: 10%;
+    /* border-style: dashed; */
+    margin: 20px 0;
+}
+
+div.titleAi {
+    width: 50%;
+    height: 100%;
+    float: left;
+    left: 50%;
+    background-color: rgb(235, 235, 235);
+}
+
+div.logoAi {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 235);
+}
+
+.ai {
+    background-image: url(AI.png);
+    width: 79px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    margin-inline: auto;
+}
+
+/* FIGMA */
+.configma {
+    width: 100%;
+    height: 10%;
+    /* border-style: dashed; */
+    margin: 20px 0;
+}
+
+div.kirititleFigma {
+    width: 50%;
+    height: 100%;
+    float: left;
+    left: 50%;
+    background-color: rgb(235, 235, 235);
+}
+
+div.kananlogoFigma {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 235);
+}
+
+.figma {
+    background-image: url(figma.jpg);
+    width: 138px;
+    margin-top: -31px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    margin-inline: auto;
+}
+
+
+/* Adobe Premiere */
+.conpr {
+    width: 100%;
+    height: 10%;
+    /* border-style: dashed; */
+    margin: 20px 0;
+
+}
+
+div.kirititlePr {
+    width: 50%;
+    height: 100%;
+    float: left;
+    left: 50%;
+    background-color: rgb(235, 235, 235);
+}
+
+div.kananlogoPr {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 235);
+}
+
+.pr {
+    background-image: url(PR.png);
+    width: 79px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    margin-inline: auto;
+}
+
+/* VEGAS */
+.convegas {
+    width: 100%;
+    height: 10%;
+    /* border-style: dashed; */
+    margin: 20px 0;
+
+}
+
+div.kirititleVegas {
+    width: 50%;
+    height: 100%;
+    float: left;
+    left: 50%;
+    background-color: rgb(235, 235, 235);
+}
+
+div.kananlogoVegas {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 235);
+}
+
+.vegas {
+    background-image: url(vegas.png);
+    width: 79px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    margin-inline: auto;
+}
+
+/* FILMORA */
+.confilmora {
+    width: 100%;
+    height: 10%;
+    /* border-style: dashed; */
+    margin: 10px 0;
+
+}
+
+div.kirititleFilmora {
+    width: 50%;
+    height: 100%;
+    float: left;
+    left: 50%;
+    background-color: rgb(235, 235, 235);
+}
+
+div.kananlogoFilmora {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 235);
+}
+
+.filmora {
+    background-image: url(filmora.jpg);
+    width: 79px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    margin-inline: auto;
+}
+
+/* CUBASE */
+.concubase {
+    width: 100%;
+    height: 10%;
+    /* border-style: dashed; */
+    margin: 20px 0;
+
+}
+
+div.kirititleCubase {
+    width: 50%;
+    height: 100%;
+    float: left;
+    left: 50%;
+    background-color: rgb(235, 235, 235);
+}
+
+div.kananlogoCubase {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 235);
+}
+
+.cubase {
+    background-image: url(cubase.jpg);
+    width: 79px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    margin-inline: auto;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* MAPS */
+
+.alamat h4 {
+    width: 100%;
+    font-size: 30px;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+
+    font-family: 'Crete Round', serif;
+    color: darkgray;
+}
+
+.containerMaps {
+    width: 100%;
+    height: 20%;
+
+    /* background-color: rgb(207, 218, 236); */
+    /* border-style: dashed; */
+    margin-top: 75px;
+
+}
+
+
+
+
+h5 {
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    float: left;
+    font-family: sans-serif;
+}
+
+
+p {
+    font-family: serif;
+}
+
+
+/* ########### ISI KANAN ########### */
+
+.kanan {
+    width: 9%;
+    height: 250vh;
+    float: right;
+    position: relative;
+    top: -77px;
+    /* border-style: dashed; */
+}
+
+/* Pencarian */
+.pencarian {
+    display: flexbox;
+    width: 70%;
+    height: 5%;
+    justify-content: center;
+    padding: 70px 0;
+    /* border: 1px solid; */
+
+    margin: -20px 0;
+}
+
+form {
+    padding-top: 29px;
+    display: flexbox;
+    width: calc(150% -50px);
+}
+
+input {
+    display: flexbox;
+    width: calc(150% - 50px);
+}
+
+.trending {
+    display: flexbox;
+    width: 100%;
+    height: 21%;
+    justify-content: center;
+    padding: 0px 0;
+    margin: 20px 0;
+    /* border: 1px solid; */
+}
+
+.judulTrending {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    /* Font */
+    font-family: serif;
+    font-size: 17px;
+    color: rgb(121, 121, 121);
+}
+
+.katTrending {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    padding-left: 10px;
+    /* Font */
+    font-family: serif;
+    font-size: 14px;
+}
+
+
+/* ---------------------------------- FOOTER ----------------------------------*/
+footer {
+
+    background-color: rgb(101, 155, 255);
+    position: relative;
+    height: 276px;
+    text-align: center;
+    clear: both;
+    left: 47px;
+    margin-left: -43px;
+    /* top: 139px; */
+}
+
+.ContainerLogoFot {
+    width: 100%;
+    height: 40%;
+    /* border-style: dashed; */
+    align-items: center;
+    margin-left: -23px;
+
+}
+
+.logoFot {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Font  */
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
+
+.aboutFot {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+.ContainerSosmedFot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 60px;
+    top: 20px;
+}
+
+.sosmed {
+    display: flex;
+    color: white;
+    letter-spacing: 50px;
+    list-style-type: none;
+
+
+}
+
+/* .sosmed:hover{
+    color: rgb(0, 255, 98);
+} */

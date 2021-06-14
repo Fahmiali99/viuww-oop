@@ -1,0 +1,579 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    /*tidak bisa scroll kanan*/
+
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    background: rgb(101, 155, 255);
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: black;
+    height: 70px;
+    align-items: center;
+    z-index: 6;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 17%;
+    justify-content: space-between;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.65em;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-style: normal;
+}
+
+a.active,
+a:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* -------------------------------------------------------------- */
+/* Menu toggle */
+.menu-toggle {
+    display: none;
+    /*display normal*/
+    align-items: center;
+    flex-direction: column;
+    height: 15px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 6;
+
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 42px;
+    top: -3px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+
+}
+
+
+
+/* -------------------------------------------------------------- */
+/* Responsive Breakout */
+
+/* Ukuran tablet*/
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 150px;
+    }
+}
+
+/* Ukuran mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        /*memulai toggle*/
+        right: 0;
+        top: 0;
+        width: 60%;
+        /*lebar slidebar*/
+        height: 100vh;
+        /* Viewport Heigh / Tinggi layar yang kita lihat*/
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgb(101, 155, 255);
+        z-index: -1;
+        /*umpetin slide bar dari navbar*/
+        transform: translateX(100%);
+        /*awal slideBar ngumpet ke kanan dulu*/
+        /*--> LANJUT tambahakn di Body*/
+        transition: all 1s;
+        opacity: 0;
+        /* position: fixed; */
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+        /*jika UL terkenal kelas slide/navigasi BALIKIN lagi ke posisi  awal (0)*/
+        z-index: 5;
+    }
+}
+
+/* Mode */
+
+.checkbox {
+    opacity: 0%;
+    position: absolute;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+/* .checkbox {
+    opacity: 0%;
+} */
+
+body.dark {
+    background-color: #292C35;
+    color: white;
+}
+
+.label {
+    background: #111;
+    display: flex;
+    border-radius: 50px;
+    height: 26px;
+    width: 50px;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    margin-left: 10px;
+    padding: 5px;
+    border: 2px solid #fff;
+}
+
+.ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 31px;
+    width: 31px;
+    transition: 0.4s;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+
+/* -------- BANNER --------- */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(nusa-penida.jpg);
+    background-size: cover;
+    z-index: -1;
+}
+
+.namaPembuka {
+    font-family: 'Lobster', cursive;
+    color: rgb(255, 226, 199);
+    font-size: 36px;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* Section */
+/* JUDUL */
+section {
+    width: 100%;
+    height: 45vh;
+
+}
+
+.judul {
+    display: flex;
+    width: 100%;
+    height: 5vh;
+
+    /* Font */
+    color: rgb(0, 0, 0, );
+    font-family: 'M PLUS 1p', sans-serif;
+    justify-content: center;
+    padding: 20px 0;
+    letter-spacing: 3px;
+}
+
+
+
+/* ----------------------------------------- */
+.kiriBan {
+    display: flex;
+    width: 33.2%;
+    height: 77%;
+    float: left;
+    /* border: 1px solid; */
+}
+
+.gambar1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+/* ----------------------------------------- */
+.tengahBan {
+    width: 33.3%;
+    height: 34.5%;
+    background-size: cover;
+    position: absolute;
+    left: 33.3%;
+    /* border: 1px solid; */
+}
+
+.gambar2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 100px;
+    height: 35.5vh;
+    align-items: center;
+}
+
+/* ----------------------------------------- */
+.kananBan {
+    width: 33.2%;
+    height: 77%;
+    background-size: cover;
+    float: right;
+    /* border: 1px solid; */
+}
+
+.gambar3 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 100px;
+    height: 34.5vh;
+    align-items: center;
+}
+
+/* --------------- IKLAN --------------- */
+.containerIklan {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-image: url(code.jpg);
+}
+
+.judulIklan {
+    font-family: serif;
+    color: rgb(255, 226, 199);
+    font-size: 28px;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* --------------- MAIN / ISI --------------- */
+
+/* main {
+    width: 100%;
+    height: 100vh;
+
+} */
+
+/* ########### ISI KIRI ########### */
+
+.kiri {
+    width: 19%;
+    height: 100%;
+    float: left;
+    position: absolute;
+    /* border-style: dashed; */
+}
+
+/* Kategori */
+.judulKategori {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* Font */
+    font-family: cursive;
+    font-size: 17px;
+
+}
+
+.kategori {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    padding: 30px 0;
+    position: absolute;
+    justify-content: center;
+    /* Font */
+    font-family: serif;
+    font-size: 14px;
+
+}
+
+.kat {
+    font-family: cursive;
+}
+
+/* ########### ISI TENGAH ########### */
+.tengah {
+    width: 61%;
+    height: 25%;
+    float: right;
+    position: absolute;
+    left: 20%;
+    /* border-style: dashed; */
+
+}
+
+.logoIsi {
+    display: flex;
+    width: 100%;
+    height: 5vh;
+
+    color: rgb(0, 0, 0, );
+    font-family: 'M PLUS 1p', sans-serif;
+    justify-content: center;
+    padding: 20px 0;
+    letter-spacing: 3px;
+
+}
+
+/* to do list */
+
+.containerToDoList {
+    width: 90%;
+    height: 90%;
+    /* background-color: salmon; */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 100px;
+}
+
+/* 
+@font-face {
+    font-family: futura;
+    src: url('Futura-Medium.woff');
+}
+
+::placeholder {
+    color: rgb(104, 104, 104);
+}
+
+input[type="tex"] {
+    width: 70%;
+    outline: none;
+    border: 1px solid #f1c40f;
+    border-radius: 50px;
+    padding: 6px;
+    background-color: transparent;
+    color: #111;
+}
+
+button[type="adede"] {
+    border: none;
+    outline: none;
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 15px;
+    transition: .2s;
+    background-color: orange;
+}
+
+button[type="but"] {
+    outline: none;
+    border: 1px solid #f1c40f;
+    border-radius: 50px;
+    padding: 6px;
+    background-color: transparent;
+    color: #111;
+
+}
+
+#remove {
+    width: 100px;
+    margin: auto;
+    margin: 5% 0;
+}
+
+button:hover {
+    background-color: rgb(255, 165, 0, 0.5);
+}
+
+.rem {
+    color: red;
+}
+ */
+
+
+/* ########### ISI KANAN ########### */
+
+.kanan {
+    width: 17%;
+    height: 100vh;
+    float: right;
+    position: relative;
+    top: -23%;
+    /* border-style: dashed; */
+    top: 0px;
+}
+
+/* Pencarian */
+.pencarian {
+    display: flexbox;
+    width: 70%;
+    height: 5%;
+    justify-content: center;
+    padding: 70px 0;
+    /* border: 1px solid; */
+
+    margin: -20px 0;
+}
+
+form {
+    padding-top: 29px;
+    display: flexbox;
+    width: calc(150% -50px);
+}
+
+input {
+    display: flexbox;
+    width: calc(150% - 50px);
+}
+
+.trending {
+    display: flexbox;
+    width: 100%;
+    height: 21%;
+    justify-content: center;
+    padding: 0px 0;
+    margin: 20px 0;
+    /* border: 1px solid; */
+}
+
+.judulTrending {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    /* Font */
+    font-family: cursive;
+    font-size: 17px;
+}
+
+.katTrending {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    padding-left: 10px;
+    /* Font */
+    font-family: serif;
+    font-size: 14px;
+}
+
+
+/* ---------------------------------- FOOTER ----------------------------------*/
+footer {
+    background-color: rgb(101, 155, 255);
+    position: relative;
+    height: 276px;
+    text-align: center;
+    clear: both;
+    left: 47px;
+    margin-left: -43px;
+}
+
+.ContainerLogoFot {
+    width: 100%;
+    height: 30%;
+    /* border-style: dashed; */
+    align-items: center;
+    margin-left: -24px;
+}
+
+.logoFot {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    /* Font */
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
+
+.aboutFot {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+a {
+    color: inherit;
+}
+
+.ContainerSosmedFot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 60px;
+    top: 20px;
+}
+
+.sosmed {
+    display: flex;
+    color: white;
+    letter-spacing: 50px;
+    list-style-type: none;
+}

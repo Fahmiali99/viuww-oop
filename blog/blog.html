@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style2.css">
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Pacifico -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <!-- M Plus 1p -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
+    <!-- Lobster -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="todolist.css">
+    <title>Home</title>
+</head>
+
+
+<body>
+    <header>
+        <nav class="logo">
+            <h4><a href="http://modul4.com/">Modul 3</a></h4>
+            <ul class="slide">
+                <li><a href="http://modul4.com/">Home</a></li>
+                <li><a href="http://profile.modul4.com/">Profile</a></li>
+                <li><a class="active" href="http://blog.modul4.com/blog.html">Blog</a></li>
+
+            </ul>
+            <div class="menu-toggle">
+                <input type="checkbox" />
+                <span></span> <!-- Buat gasis -->
+                <span></span> <!-- Buat gasis -->
+                <span></span> <!-- Buat gasis -->
+
+            </div>
+        </nav>
+        <script src="script2.js"></script>
+
+        <!-- Mode -->
+        <div>
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+        <script src="mode.js"></script>
+    </header>
+
+    <div class="banner">
+        <div class="namaPembuka">
+            <h1>Blog</h1>
+        </div>
+    </div>
+
+    <!-- Judul -->
+
+    <section>
+        <div class="judul">
+            <h3>MY LIFE FOR GOD</h3>
+        </div>
+
+        <div class="kiriBan">
+            <p></p>
+            <div class="gambar1">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+        </div>
+
+        <div class="tengahBan">
+            <p></p>
+            <div class="gambar2">
+                <i class="fas fa-globe-africa"></i>
+            </div>
+        </div>
+
+        <div class="kananBan">
+            <div class="gambar3">
+                <i class="fas fa-paper-plane"></i>
+            </div>
+        </div>
+    </section>
+
+    <div class="containerIklan">
+        <div class="judulIklan">
+            <h1>EDUCATION</h1>
+
+        </div>
+    </div>
+
+    <!-- MAIN / ISI -->
+    <main>
+        <section>
+            <div class="kiri">
+                <br><br><br><br>
+                <div class="judulKategori">
+                    <p>Kategori</p>
+                </div>
+                <div class="kategori">
+                    <ul>
+                        <li><a href="#1">Penemu Bahasa Java</a></li>
+                        <li><a href="#2">Belajar Java</a></li>
+                        <li><a href="#3">Informasi IoT</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tengah">
+                <div class="logoIsi" id="1">
+                    <h2>Modul 2</h2>
+                </div>
+
+                <!-- to do list -->
+                <!-- <div class="containerToDoList"> -->
+                <!-- <script type="text/javascript">
+                    </script>
+                    <h1>TO Do List</h1>
+                    <input type="tex" placeholder="New Item">
+                    <button type="adede" id="add">Add</button>
+                    <ol id="myList"></ol>
+                    <button type="but" id="remove">Remove</button>
+                </div>
+                <script type="text/javascript" src="crud.js">
+                </script> -->
+
+                <!-- To Do List -->
+                <script type="text/javascript" src="crud.js"></script>
+                <section class="todo-list-wrapper">
+                    <div class="todo-list-container">
+                        <div class="mark-all-tasks">
+                            <div class="mark-all-tasks-container">
+                                <span class="mark-all-btn" role="button" id="mark-all-finished">
+                                    <span class="btn-label">Pilih semua</span>
+                                    <span class="action-circle completed">
+                                        <i class="material-icons">check</i>
+                                    </span>
+                                </span>
+                                <span class="mark-all-btn move-down" role="button" id="mark-all-incomplete">
+                                    <span class="btn-label">Semua sudah terpilih</span>
+                                    <span class="action-circle">
+                                        <i class="material-icons">check</i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="todo-list-header">
+                            <br>
+                            <h4>Target Belajar</h4>
+                            <br>
+                        </div>
+                        <div class="todo-list-body">
+                            <ul id="todo-list">
+                                <li class="task">
+                                    <div class="task-container">
+                                        <span class="task-label">OOP Java</span>
+                                        <span class="task-action-btn">
+                                            <span class="action-circle large delete-btn" title="Delete Task">
+                                                <i class="material-icons">delete</i>
+                                            </span>
+                                            <span class="action-circle large complete-btn" title="Mark Complete">
+                                                <i class="material-icons">check</i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="todo-list-footer">
+                            <br>
+                            <div class="add-task-btn-wrapper">
+                                <span class="add-task-btn">
+                                    <i class="material-icons">add</i>
+                                </span>
+                            </div>
+                            <div class="new-task-wrapper">
+                                <textarea id="new-task" placeholder="Masukkan text disini. . ."></textarea>
+                                <span class="error-message hidden">Data yang anda inputkan kosong</span>
+                                <span class="add-new-task-btn btn" id="add-task">Add</span>
+                                <span class="cancel-btn btn" id="close-task-panel">Close</span>
+                                <span class="clear-all btn" id="clear-all">Clear All</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="notification-popup hide">
+                    <p>
+                        <span class="task"></span>
+                        <span class="notification-text"></span>
+                    </p>
+                </div>
+            </div>
+
+
+            </div>
+
+            <!--  HTML Template for tasks-->
+            <script type="tect/template" id="task-template">
+                <li class="task">
+                    <div class="task-container">
+                        <span class="task-label"></span>
+                        <span class="task-action-btn">
+                            <span class="action-circle large delete-btn" title="Delete Task">
+                                <i class="material-icons">delete</i>
+                            </span>
+                            <span class="action-circle large complete-btn" title="Mark Complete">
+                                <i class="material-icons">check</i>
+                            </span>
+                        </span>
+                    </div>
+                </li>
+            </script>
+
+            <div class="kanan">
+                <div class="pencarian">
+                    <form>
+                        Search :
+                        <input type="text">
+                        <br>
+                        <button>Send</button>
+                    </form>
+                </div>
+
+                <div class="trending">
+                    <div class="judulTrending">
+                        <p>Popular</p>
+                    </div>
+                    <div class="katTrending">
+                        <ul>
+                            <li><a href="#3">Informasi IoT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="ContainerLogoFot">
+            <div class="logoFot">
+                <h1>Modul 3</h1>
+            </div>
+
+            <div class="aboutFot">
+                <p>Pengetahuan disini sangat menyenangkan, selalu terupdate, program sangat kompleks</p>
+                <p>Jangan lupa semangat ngoding</p>
+            </div>
+        </div>
+        <div class="ContainerSosmedFot">
+            <ul class="sosmed">
+                <li><a href="https://www.facebook.com/LARE.USING.13/"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/fahmi_ali13/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCpuJBYMaQCZht85hw5N1CBw"><i
+                            class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
